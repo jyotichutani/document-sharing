@@ -1,0 +1,27 @@
+{
+    "name": "document-sharing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "express": "^4.21.1",
+        "mongoose": "^8.7.3"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "@babel/register": "^7.25.9",
+        "mocha": "^10.8.2",
+        "mock-require": "^3.0.3",
+        "sinon": "^19.0.2",
+        "supertest": "^7.0.0"
+    }
+}

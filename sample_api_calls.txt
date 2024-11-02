@@ -1,0 +1,31 @@
+Create a Document:
+curl -X POST http://localhost:3000/documents -H "Content-Type: application/json" -d '{"name": "New Document2", "userEmail": "user2@example.com"}'
+
+View a Document:
+curl -X GET http://localhost:3000/documents/6725c96f44f44688c3fcade9 -H "Content-Type: application/json" -d '{"userEmail": "user2@example.com"}'
+
+Edit a Document:
+curl -X PUT http://localhost:3000/documents/6725c7b844f44688c3fcadc4 \
+-H "Content-Type: application/json" \
+-d '{"userEmail": "user2@example.com", "newName": "Updated Document Name by User 2"}'
+
+Grant Access:
+curl -X POST http://localhost:3000/documents/6725c7b844f44688c3fcadc4/access \
+-H "Content-Type: application/json" \
+-d '{"userEmail": "user@example.com", "accessorEmail": "user2@example.com", "accessType": "read"}'
+
+Edit Access:
+curl -X PUT http://localhost:3000/documents/6725c7b844f44688c3fcadc4/access \
+-H "Content-Type: application/json" \
+-d '{"userEmail": "user@example.com", "accessorEmail": "user2@example.com", "accessType": "write"}'
+
+Bonus - Get all documents a user has access to:
+curl -X GET http://localhost:3000/documents/user/documents \
+-H "Content-Type: application/json" \
+-d '{"userEmail": "user2@example.com"}'
+
+Delete a Document:
+curl -X DELETE http://localhost:3000/documents/6725c7b844f44688c3fcadc4 \
+-H "Content-Type: application/json" \
+-d '{"userEmail": "user2@example.com"}'
+
